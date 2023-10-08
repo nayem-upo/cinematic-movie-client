@@ -2,13 +2,21 @@
 import React, { useEffect, useState } from 'react';
 import CommingCard from './CommingCard';
 interface MovieType {
+    _id: string;
     id: number;
-    releasingDate: string;
     movieName: string;
+    movieImage: string;
+    releaseDate: string;
     language: string;
     type: string;
-    movieImage: string;
+    totalTicketPrice: number;
+    quantity: number;
+    bookingDate: string;
+    userEmail: string;
+    releasingDate: any;
+    trailerLink: string;
 }
+
 
 const CommingMovies = () => {
     const [newMovies, setNewMovies] = useState<MovieType[]>([]);
@@ -16,7 +24,7 @@ const CommingMovies = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:3000/api/upcomming");
+                const response = await fetch("http://localhost:5000/upcommingcinemas");
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
                 }
