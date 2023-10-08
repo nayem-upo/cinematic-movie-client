@@ -2,17 +2,24 @@
 import React, { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
 
-type MovieType = {
+interface Movie {
     id: number;
+    likes: number;
     movieName: string;
+    movieImage: string;
     releaseDate: string;
     language: string;
-    movieImage: string;
-    likes: number
-};
+    type: string;
+    totalTicketPrice: number;
+    quantity: number;
+    bookingDate: string;
+    userEmail: string;
+    releasingDate: any;
+    trailerLink: string;
+}
 
 const ShowingMovies = () => {
-    const [newMovies, setNewMovies] = useState<MovieType[]>([]);
+    const [newMovies, setNewMovies] = useState<Movie[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -48,7 +55,7 @@ const ShowingMovies = () => {
                 </div>
             </div>
             <div className="grid grid-cols-4 gap-y-10 justify-center items-center">
-                {newMovies.map((movie: MovieType) => (
+                {newMovies.map((movie: Movie) => (
                     <MovieCard key={movie.id} movie={movie}></MovieCard>
                 ))}
             </div>

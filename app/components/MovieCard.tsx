@@ -1,11 +1,10 @@
 'use client'
 import React from 'react';
 import Link from 'next/link';
-interface MovieType {
+interface Movie {
+    id: number;
     likes: number;
     movieName: string;
-    id: number;
-    trailerLink: string;
     movieImage: string;
     releaseDate: string;
     language: string;
@@ -15,10 +14,12 @@ interface MovieType {
     bookingDate: string;
     userEmail: string;
     releasingDate: any;
+    trailerLink: string;
 }
 interface MovieCardProps {
-    movie: MovieType;
+    movie: Movie;
 }
+
 
 function formatLikes(likes: number): string {
     if (likes >= 1000) {
