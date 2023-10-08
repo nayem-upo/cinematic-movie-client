@@ -36,10 +36,8 @@ const Page: React.FC<PageProps> = ({ params }) => {
             .then(res => res.json())
             .then((data: Movie[]) => setData(data));
     }, []);
-
     const movie = data.find(m => m.id == params.id);
 
-    // console.log(ticketPrice);
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentDateTime(new Date());
@@ -61,28 +59,34 @@ const Page: React.FC<PageProps> = ({ params }) => {
     }
 
     const showModal = () => {
-        setTotalTicketPrice(movie?.price)
-        document.getElementById(`${movie?.id}`).showModal();
+        if (movie?.id) {
+            setTotalTicketPrice(movie.price || 0);
+            const modal = document.getElementById(`${movie.id}`)! as HTMLDialogElement;
+            modal.showModal();
+        }
     }
 
     const increment = () => {
         if (count < 10) {
             setCount(count + 1);
-            setTotalTicketPrice(totalTicketPrice + movie?.price)
+            setTotalTicketPrice(totalTicketPrice + (movie?.price || 0));
         }
     }
 
     const decrement = () => {
         if (count > 1) {
             setCount(count - 1);
-            setTotalTicketPrice(totalTicketPrice - movie?.price)
+            setTotalTicketPrice(totalTicketPrice - (movie?.price || 0));
         }
     }
 
 
     const postCinema = () => {
         if (!user) {
-            document.getElementById(`${movie?.id}`).close();
+            if (movie?.id) {
+                const modal = document.getElementById(`${movie.id}`)! as HTMLDialogElement;
+                modal.close();
+            }
             Swal.fire({
                 title: 'Please login',
                 text: "You can not book a ticket without log in!",
@@ -106,7 +110,10 @@ const Page: React.FC<PageProps> = ({ params }) => {
                 body: JSON.stringify(movieObject),
             })
                 .then((response) => {
-                    document.getElementById(`${movie?.id}`).close();
+                    if (movie?.id) {
+                        const modal = document.getElementById(`${movie.id}`)! as HTMLDialogElement;
+                        modal.close();
+                    }
                     Swal.fire(
                         'Congratulations!',
                         'Successfully booked ticket',

@@ -1,5 +1,5 @@
 "use client"
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import MenuBar from '../components/MenuBar';
 import { SignIn } from '@clerk/nextjs';
@@ -7,7 +7,6 @@ import { SignIn } from '@clerk/nextjs';
 const page = () => {
     const router = useRouter();
     const returnUrl = router?.query?.returnUrl || '/';
-
 
     return (
         <div>
