@@ -5,26 +5,40 @@ import MenuBar from '../components/MenuBar';
 import TicketCard from '../components/TicketCard';
 import { useUser } from '@clerk/nextjs';
 import Profile from '../components/Profile';
-interface Movie {
-    id: string;
+
+
+interface CommonTicketProps {
     movieName: string;
     movieImage: string;
     releaseDate: string;
     language: string;
     type: string;
+}
+
+interface Movie extends CommonTicketProps {
+    id: string;
     price: number;
 }
 
+interface Ticket extends CommonTicketProps {
+    _id: string;
+    totalTicketPrice: number;
+    quantity: number;
+    bookingDate: string;
+    userEmail: string;
+}
+
+
 const page = () => {
-    const [ticktes, setTickets] = useState<Movie[]>([])
+    const [tickets, setTickets] = useState<Ticket[]>([]);
     const { user } = useUser();
     const [tab, setTab] = useState<number>(1);
     useEffect(() => {
         fetch(`http://localhost:5000/selectedmovies/${user?.primaryEmailAddress?.emailAddress}`)
             .then(res => res.json())
-            .then((data: Movie[]) => setTickets(data));
-    }, [ticktes]);
-    // console.log(ticktes)
+            .then((data: Ticket[]) => setTickets(data));
+    }, [tickets]);
+    // console.log(tickets)
     return (
         <div>
             <Header />
@@ -85,13 +99,12 @@ const page = () => {
                                 <p className="text-base p-[0.4px] bg-gray-600"></p>
                                 <div className=''>
                                     {
-                                        ticktes.length === 0 && <p className="text-xl">
+                                        tickets.length === 0 && <p className="text-xl">
                                             No Tickets to show!
                                         </p>
                                     }
                                     {
-                                        ticktes.map((ticket: Movie) => <TicketCard ticket={ticket} key={ticket.id}></TicketCard>)
-
+                                        tickets.map((ticket: Ticket) => <TicketCard ticket={ticket} key={ticket._id}></TicketCard>)
                                     }
                                 </div>
                             </div>
