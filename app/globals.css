@@ -87,9 +87,9 @@ body {
 /* Base styles */
 .card {
   float: left;
-  width: 300px;
+  /* padding: 0 1.7rem; */
+  /* width: 300px; */
 }
-
 .card .menu-content::before,
 .card .menu-content::after {
   content: '';

@@ -42,7 +42,7 @@ const CommingMovies = () => {
             <div className='flex justify-between mx-[33px] items-center'>
                 <h1 className='md:text-2xl text-xl text-white py-6'>COMING SOON</h1>
             </div>
-            <div className="grid md:grid-cols-4 md:gap-y-10 gap-y-12 my-5 md:my-0 justify-center items-center">
+            <div className="grid md:grid-cols-4 md:gap-y-10 gap-y-12 my-5 md:my-0 justify-center items-center mx-auto">
                 {newMovies.map((movie: MovieType) => (
                     <CommingCard key={movie.id} movie={movie}></CommingCard>
                 ))}
