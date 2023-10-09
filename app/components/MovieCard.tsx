@@ -92,7 +92,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
                                     </button>
                                 </form>
                             </div>
-                            <iframe width="920" height="515"
+                            <iframe className="md:w-[920px] md:h-[515px] w-[100%]"
                                 src={trailerLink} >
                             </iframe>
 

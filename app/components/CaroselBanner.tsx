@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const CaroselBanner = () => {
     return (
-        <div>
+        <div className='md:mt-24 mt-14'>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
