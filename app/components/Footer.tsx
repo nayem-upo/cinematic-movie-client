@@ -21,38 +21,40 @@ const Footer = () => {
                     <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>EVENTS</li>
                     <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>NVSP</li>
                 </ul>
-                <div className='mx-auto grid grid-cols-3 gap-5'>
-                    <ul className='mx-auto flex flex-col gap-2'>
-                        <li className='font-semibold text-[#FCCB08]'>PVR INOX BRANDS</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>DIRECTOR'S CUT</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>PICTURES</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>ICE</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>IMAX</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>4DX</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>PLAYHOUSE</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>GOLD</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>LUXE</li>
-                    </ul>
-                    <ul className='mx-auto flex flex-col gap-2'>
-                        <li className='cursor-default'>_</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>P[XL]</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>ONYX</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>BIGPIX</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>CLUB</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>KIDDLES</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>LASER</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>MX4D</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>ONYX-DINER</li>
-                    </ul>
-                    <ul className='mx-auto flex flex-col gap-2'>
-                        <li className='cursor-default'>_</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>SCREENX</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>AMPLIX</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>DOLBY</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>INSIGNIA</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>NEST</li>
-                        <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>V PRISTINE</li>
-                    </ul>
+                <div className='hidden md:block'>
+                    <div className='mx-auto grid grid-cols-3 gap-5'>
+                        <ul className='mx-auto flex flex-col gap-2'>
+                            <li className='font-semibold text-[#FCCB08]'>PVR INOX BRANDS</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>DIRECTOR'S CUT</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>PICTURES</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>ICE</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>IMAX</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>4DX</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>PLAYHOUSE</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>GOLD</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>LUXE</li>
+                        </ul>
+                        <ul className='mx-auto flex flex-col gap-2'>
+                            <li className='cursor-default'>_</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>P[XL]</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>ONYX</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>BIGPIX</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>CLUB</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>KIDDLES</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>LASER</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>MX4D</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>ONYX-DINER</li>
+                        </ul>
+                        <ul className='mx-auto flex flex-col gap-2'>
+                            <li className='cursor-default'>_</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>SCREENX</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>AMPLIX</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>DOLBY</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>INSIGNIA</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>NEST</li>
+                            <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>V PRISTINE</li>
+                        </ul>
+                    </div>
                 </div>
                 <ul className='mx-auto flex flex-col gap-2'>
                     <li className='font-semibold text-[#FCCB08]'>CINEMAS</li>
@@ -64,11 +66,13 @@ const Footer = () => {
                     <li className='hover:text-[#FCCB08] cursor-pointer duration-150'>SUBSCRIBE TO NEWSLETTER</li>
                 </ul>
             </div>
-            <div className='flex justify-evenly items-center py-6'>
-                <img className='w-16' src="https://i.ibb.co/tBtY92n/Colorful-Modern-Stream-C-Free-Logo.png" alt="" />
-                <h1 className='hover:text-[#FCCB08] text-white cursor-pointer duration-150 font-semibold'>PRIVACY POLICY</h1>
-                <h1 className='hover:text-[#FCCB08] text-white cursor-pointer duration-150 font-semibold'>TERMS OF USE</h1>
-                <div className='flex gap-4 items-center'>
+            <div className='md:flex justify-evenly items-center py-6'>
+                <div className='flex items-center justify-center gap-4'>
+                    <img className='w-16' src="https://i.ibb.co/tBtY92n/Colorful-Modern-Stream-C-Free-Logo.png" alt="" />
+                    <h1 className='hover:text-[#FCCB08] text-white cursor-pointer duration-150 font-semibold'>PRIVACY POLICY</h1>
+                    <h1 className='hover:text-[#FCCB08] text-white cursor-pointer duration-150 font-semibold'>TERMS OF USE</h1>
+                </div>
+                <div className='flex gap-4 items-center justify-center'>
                     <svg
                         className='cursor-pointer rounded-full hover:bg-[#85763c] duration-200'
                         width="33px"

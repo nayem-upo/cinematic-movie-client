@@ -41,9 +41,9 @@ const ShowingMovies = () => {
     return (
         <div className='mx-auto pb-20'>
             <div className='flex justify-between mx-[33px] items-center'>
-                <h1 className='text-2xl text-white py-6'>NOW SHOWING</h1>
+                <h1 className='md:text-2xl text-xl text-white py-6'>NOW SHOWING</h1>
                 <div>
-                    <select className="bg-[#3B3B3B] uppercase w-[180px] text-xs text-white outline-none px-2 py-[10px] rounded-md">
+                    <select className="bg-[#3B3B3B] uppercase md:w-[180px] text-xs text-white outline-none px-2 py-[10px] rounded-md">
                         <option >LANGUAGE</option>
                         <option>ENGLISH</option>
                         <option>HINDI</option>
@@ -54,7 +54,7 @@ const ShowingMovies = () => {
                     </select>
                 </div>
             </div>
-            <div className="grid grid-cols-4 gap-y-10 justify-center items-center">
+            <div className="grid md:grid-cols-4 md:gap-y-10 gap-y-12 my-5 md:my-0 justify-center items-center">
                 {newMovies.map((movie: Movie) => (
                     <MovieCard key={movie.id} movie={movie}></MovieCard>
                 ))}
