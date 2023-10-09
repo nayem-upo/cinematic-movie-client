@@ -133,11 +133,13 @@ const Page: React.FC<PageProps> = ({ params }) => {
                 <div className="py-5 md:px-20 flex flex-col">
                     <div className='bg-[#FBD158] relative'>
                         <img className='md:w-[300px] w-[250px] md:h-[400px] mx-auto relative blur-shadow shadow-2xl' src={movie?.movieImage} alt="" />
-                        <div className='absolute md:bottom-5 bottom-0 left-10 md:bg-[#00000000] bg-[#fbd2589d] md:p-0 p-2 rounded-lg'>
-                            <h1 className='text-3xl font-semibold'>{movie?.movieName}</h1>
-                            <p>{movie?.releaseDate} ● {movie?.language}</p>
+                        <div>
+                            <div className='absolute md:bottom-5 bottom-0 left-10 md:bg-[#00000000] bg-[#fbd2589d] md:p-0 p-2 rounded-lg'>
+                                <h1 className='text-3xl font-semibold'>{movie?.movieName}</h1>
+                                <p>{movie?.releaseDate} ● {movie?.language}</p>
+                            </div>
+                            <p className='absolute text-lg font-semibold bottom-1 md:bottom-5 right-10'>Price: ${movie?.price}</p>
                         </div>
-                        <p className='absolute text-lg font-semibold bottom-1 md:bottom-5 right-10'>Price: ${movie?.price}</p>
                     </div>
 
                     <button onClick={showModal} className="button mx-auto my-5 hover:bg-[#FCCB08] bg-white text-black text-xs font-semibold uppercase px-5 py-[8px] rounded duration-150">BOOK TICKET</button>

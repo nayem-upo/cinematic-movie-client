@@ -2,12 +2,9 @@
 import { SignedIn, SignedOut, useAuth, useClerk } from '@clerk/nextjs';
 import Link from 'next/link';
 import React from 'react';
-interface MenuBarProps {
-    session: any;
-}
+
 
 const MenuBar = () => {
-    const { isLoaded, userId, sessionId, getToken } = useAuth();
     const { signOut } = useClerk();
     return (
         <div className="drawer drawer-end z-50 max-w-7 mx-auto">
