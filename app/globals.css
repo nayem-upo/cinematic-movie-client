@@ -79,15 +79,14 @@ body {
 }
 
 
-.row {
+/* .row {
   max-width: 900px;
   margin: 50px auto 0;
-}
+} */
 
 /* Base styles */
 .card {
   float: left;
-  padding: 0 1.7rem;
   width: 300px;
 }
 
