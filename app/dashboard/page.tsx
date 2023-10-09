@@ -34,7 +34,7 @@ const page = () => {
     const { user } = useUser();
     const [tab, setTab] = useState<number>(1);
     useEffect(() => {
-        fetch(`http://localhost:5000/selectedmovies/${user?.primaryEmailAddress?.emailAddress}`)
+        fetch(`https://cinematic-movie-server.vercel.app/selectedmovies/${user?.primaryEmailAddress?.emailAddress}`)
             .then(res => res.json())
             .then((data: Ticket[]) => setTickets(data));
     }, [tickets]);

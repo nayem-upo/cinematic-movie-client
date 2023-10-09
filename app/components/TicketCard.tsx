@@ -40,7 +40,7 @@ const TicketCard: React.FC<{ ticket: Ticket }> = ({ ticket }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/selectedmovies/${ticket._id}`, {
+                fetch(`https://cinematic-movie-server.vercel.app/selectedmovies/${ticket._id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json",

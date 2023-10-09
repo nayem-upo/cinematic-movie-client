@@ -32,7 +32,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
     const router = useRouter();
 
     useEffect(() => {
-        fetch('http://localhost:5000/runningcinemas')
+        fetch('https://cinematic-movie-server.vercel.app/runningcinemas')
             .then(res => res.json())
             .then((data: Movie[]) => setData(data));
     }, []);
@@ -102,7 +102,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
             })
         }
         else {
-            fetch("http://localhost:5000/selectedmovies", {
+            fetch("https://cinematic-movie-server.vercel.app/selectedmovies", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

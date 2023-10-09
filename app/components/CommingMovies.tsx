@@ -24,7 +24,7 @@ const CommingMovies = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:5000/upcommingcinemas");
+                const response = await fetch("https://cinematic-movie-server.vercel.app/upcommingcinemas");
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
                 }
