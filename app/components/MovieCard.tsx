@@ -92,8 +92,11 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
                                     </button>
                                 </form>
                             </div>
-                            <iframe className="md:w-[920px] md:h-[515px] w-[100%]"
-                                src={trailerLink} >
+                            <iframe className="md:w-[920px] md:h-[515px]"
+                                src={trailerLink} allow="autoplay; encrypted-media"
+                                allowFullScreen
+                                title="Video Player"
+                            >
                             </iframe>
 
                         </div>

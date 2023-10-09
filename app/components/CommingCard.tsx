@@ -20,6 +20,7 @@ interface CommingCardProps {
 const CommingCard: React.FC<CommingCardProps> = ({ movie }) => {
     const { movieName, releasingDate, language, movieImage, type, id, trailerLink } = movie;
 
+
     return (
         <div>
             <div className="example-2 card mx-auto px-[27px]">
@@ -174,8 +175,12 @@ const CommingCard: React.FC<CommingCardProps> = ({ movie }) => {
                                 </button>
                             </form>
                         </div>
-                        <iframe className="md:w-[920px] md:h-[515px] w-[100%]"
-                            src={trailerLink} >
+                        <iframe className="md:w-[920px] md:h-[515px]"
+                            src={trailerLink}
+                            allow="autoplay; encrypted-media"
+                            allowFullScreen
+                            title="Video Player"
+                            >
                         </iframe>
 
                     </div>
