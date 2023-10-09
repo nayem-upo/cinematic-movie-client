@@ -35,7 +35,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
     const formattedReleaseDate = new Date(releaseDate).toLocaleDateString();
     return (
         <div className="example-2 card mx-auto">
-            <div className="wrapper md:min-h-[320px] md:w-[240px] duration-300 hover:scale-105 bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url(${movieImage})` }}>
+            <div className="wrapper md:min-h-[320px] md:w-[240px] w-[260px] min-h-[320px] duration-300 hover:scale-105 bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url(${movieImage})` }}>
                 <div className="header">
                     <div className="date bg-[#FCCB08] text-black font-semibold px-3 py-1 rounded">
                         <span className="day">{formattedReleaseDate}</span>

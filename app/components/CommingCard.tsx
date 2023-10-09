@@ -23,7 +23,7 @@ const CommingCard: React.FC<CommingCardProps> = ({ movie }) => {
     return (
         <div>
             <div className="example-2 card mx-auto px-[27px]">
-                <div className="wrapper md:min-h-[320px] md:w-[240px] duration-300 hover:scale-105 bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url(${movieImage})` }}>
+                <div className="wrapper md:min-h-[320px] min-h-[320px] md:w-[240px] w-[260px] duration-300 hover:scale-105 bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url(${movieImage})` }}>
                     <div className="header">
                         <ul className="menu-content">
                             <li>

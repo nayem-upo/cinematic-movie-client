@@ -40,7 +40,7 @@ const ShowingMovies = () => {
 
     return (
         <div className='mx-auto pb-20'>
-            <div className='flex justify-between mx-[33px] items-center md:mx-10'>
+            <div className='flex justify-between mx-[33px] items-center'>
                 <h1 className='md:text-2xl text-xl text-white py-6'>NOW SHOWING</h1>
                 <div>
                     <select className="bg-[#3B3B3B] uppercase md:w-[180px] text-xs text-white outline-none px-2 py-[10px] rounded-md">
