@@ -22,7 +22,7 @@ const page = () => {
                     className='bg-[#212121e5] z-0'
                 >
                     <div className='flex justify-center items-center mt-6'>
-                        <SignIn afterSignInUrl={returnUrl as string} />
+                        <SignIn afterSignInUrl={returnUrl} />
                     </div>
 
                 </div>
