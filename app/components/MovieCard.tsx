@@ -68,7 +68,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
                         <div className="">
                             <div className="modal-action">
                                 <form method="dialog">
-                                    <button className='absolute -ms-5 -mt-5'>
+                                    <button className='absolute md:-ms-5 ms-2 -mt-6 md:-mt-5'>
                                         <svg
                                             width="40px"
                                             height="40px"
@@ -92,7 +92,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
                                     </button>
                                 </form>
                             </div>
-                            <iframe className="md:w-[920px] md:h-[515px]"
+                            <iframe className="md:w-[920px] md:h-[515px] w-[110%] h-[200px]"
                                 src={trailerLink} allow="autoplay; encrypted-media"
                                 allowFullScreen
                                 title="Video Player"
